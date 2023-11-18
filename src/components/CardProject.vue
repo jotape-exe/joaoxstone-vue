@@ -5,7 +5,7 @@
     </div>
     <h2 style="margin-top: 5px">{{ title }}</h2>
     <Divider style="margin: 5px" />
-    <p style="color: #616161">
+    <p style="color: #616161; text-align: justify;">
       {{ content }}
     </p>
     <Badge
@@ -23,7 +23,7 @@
         <img class="badge" :src="url" />
       </div>
     </div>
-    <Button  @click.prevent="goToProject(projectUrl)">Ver</Button>
+    <Button type="primary" @click.prevent="goToProject(projectUrl)">Ver</Button>
   </div>
 </template>
 
@@ -52,8 +52,7 @@ const goToProject = (url: string) => {
   border-radius: 10px;
   border: none;
   background-color: #fcfcfc;
-  width: 30dvw;
-  height: 37dvw;
+  width: 25dvw;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -61,6 +60,7 @@ const goToProject = (url: string) => {
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  max-height: 442px;
 }
 
 .badge-container {
@@ -80,4 +80,17 @@ const goToProject = (url: string) => {
   border-radius: 10px;
   background-color: #fff;
 }
+
+@media (max-width: 1240px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 962px){
+  .card{
+    width: 70dvw;
+  }
+}
+
 </style>
