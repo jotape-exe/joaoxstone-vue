@@ -150,6 +150,6 @@ h3 {
 .all{
   margin: 1rem;
   max-width: 200px;
-  position: absolute;
+  position: fixed;
 }
 </style>

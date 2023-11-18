@@ -1,38 +1,48 @@
 <template>
   <div class="card">
-    <GithubOutlined style="font-size: 44px" />
-    <h2 style="margin-top: 10px">Vince</h2>
-    <Divider />
-    <p style="color: #616161;">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+    <div>
+      <img class="badge" :src="props.projectLogo" />
+    </div>
+    <h2 style="margin-top: 5px">{{ title }}</h2>
+    <Divider style="margin: 5px" />
+    <p style="color: #616161">
+      {{ content }}
     </p>
     <Badge
-    count="Novembro 2023"
-    :number-style="{
-      backgroundColor: '#fff',
-      color: '#999',
-      marginTop: '10px',
-      boxShadow: '0 0 0 1px #d9d9d9 inset',
-    }"
-  />
-  <Divider />
-  <span style="width: 100px; height: 100px; border-radius: 10px; background-color: #fff;" class="iconify" icon="mdi-account"></span>
+      :count="projectDate"
+      :number-style="{
+        backgroundColor: '#fff',
+        color: '#999',
+        marginTop: '10px',
+        boxShadow: '0 0 0 1px #d9d9d9 inset',
+      }"
+    />
+    <Divider style="margin: 10px" />
+    <div class="badge-container">
+      <div v-for="url in props.url" :key="url">
+        <img class="badge" :src="url" />
+      </div>
+    </div>
+    <Button  @click.prevent="goToProject(projectUrl)">Ver</Button>
   </div>
 </template>
 
 <script setup lang="ts">
 import { GithubOutlined } from "@ant-design/icons-vue";
-import { Divider, Badge, Avatar } from "ant-design-vue";
+import { Divider, Badge, Avatar, Button } from "ant-design-vue";
+import { defineProps } from "vue";
+import { CardContent } from "../models/interfaces/ICardContent";
 
-import SvgIcon from '@jamescoyle/vue-icon'
-import { mdiAccount } from '@mdi/js'
+import SvgIcon from "@jamescoyle/vue-icon";
+import { mdiAccount } from "@mdi/js";
 
-const props = defineProps(["data"]);
+//const props = defineProps(['card']);
 
+const props = defineProps<CardContent>();
 
+const goToProject = (url: string) => {
+  window.open(url)
+}
 
 </script>
 
@@ -42,15 +52,32 @@ const props = defineProps(["data"]);
   border-radius: 10px;
   border: none;
   background-color: #fcfcfc;
-  width: 400px;
-  height: 500px;
+  width: 30dvw;
+  height: 37dvw;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
 
+.badge-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .card:hover {
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.badge {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  background-color: #fff;
 }
 </style>
