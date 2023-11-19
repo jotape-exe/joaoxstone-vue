@@ -6,6 +6,7 @@ import {
   MenuUnfoldOutlined,
   HomeFilled,
   ProjectFilled,
+  CodeFilled,
   TeamOutlined,
 } from "@ant-design/icons-vue";
 
@@ -41,6 +42,12 @@ const items = reactive([
     label: "Recomendações",
     title: "Recomendaçoes",
   },
+  {
+    key: "/experience",
+    icon: () => h(CodeFilled),
+    label: "Experiência",
+    title: "Experiência",
+  },
 ]);
 
 watch(
@@ -65,15 +72,15 @@ const handleMenuClick = (info: any) => {
   <div class="all">
     <Button
       type="primary"
-      size="large"
+      size="small"
       style="margin-bottom: 16px; width: 4rem; height: 3rem"
       @click="toggleCollapsed"
     >
-      <MenuUnfoldOutlined style="font-size: 24px" v-if="state.collapsed" />
-      <MenuFoldOutlined style="font-size: 24px" v-else />
+      <MenuUnfoldOutlined style="font-size: 20px" v-if="state.collapsed" />
+      <MenuFoldOutlined style="font-size: 20px" v-else />
     </Button>
     <Menu
-      size="large"
+      size="small"
       style="margin-bottom: 16px"
       v-model:openKeys="state.openKeys"
       v-model:selectedKeys="state.selectedKeys"
@@ -86,13 +93,6 @@ const handleMenuClick = (info: any) => {
   </div>
 
   <RouterView style="padding: 1rem;" />
-  <Space
-    class="bottom-buttons"
-    size="middle"
-    style="display: flex; align-items: center; justify-content: center"
-  >
-    <Socials />
-  </Space>
 </template>
 
 <style>

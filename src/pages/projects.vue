@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { Space } from "ant-design-vue";
-import CardProject from "./CardProject.vue";
+import CardProject from "../components/CardProject.vue";
 import { CardContent } from "../models/interfaces/ICardContent";
 import vince from "../../public/img/512vince.png";
 
@@ -45,18 +45,18 @@ const cards: CardContent[] = [
     ],
   },
   {
-    title: "Vince",
+    title: "IzaPay",
     content: `
           O Vince facilita a forma como você lida com suas finanças diárias. Gerencie suas movimentações financeiras de maneira simples e eficiente.
           Visualize suas finanças de maneira clara com gráficos e métricas detalhadas. Entenda seus padrões de gastos e tome decisões informadas para alcançar suas metas.`,
     projectDate: "Novembro 2023",
     projectLogo: vince,
     projectUrl:
-      "https://play.google.com/store/apps/details?id=com.company.ourfinances",
+      "https://izapay-web.netlify.app/",
     url: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
     ],
   },
   {

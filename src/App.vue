@@ -3,7 +3,7 @@ import { ConfigProvider } from "ant-design-vue";
 import DefaultLayout from "./layouts/DefaultLayout.vue";
 import Me from "./components/Me.vue";
 
-import { theme } from 'ant-design-vue';
+import { theme } from "ant-design-vue";
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import { theme } from 'ant-design-vue';
       token: {
         colorPrimary: '#722ED1',
         colorSuccess: '#52c41a',
-        colorWarning : '#faad14',
+        colorWarning: '#faad14',
         colorError: '#ff4d4f',
         colorInfo: '#1677ff',
       },
@@ -21,7 +21,7 @@ import { theme } from 'ant-design-vue';
   >
   </ConfigProvider>
   <DefaultLayout>
-      <RouterView />
+    <RouterView />
   </DefaultLayout>
 </template>
 
