@@ -14,20 +14,11 @@ Antes de começar, certifique-se de ter o Node.js e o npm (ou yarn) instalados e
 
 #### Geral
 
-
 ```
 npm install
 ```
 ```
 yarn
-```
-
-#### Ant Design Vue
-```
-npm install ant-design-vue@4.x --save
-```
-```
-yarn add ant-design-vue@4.x
 ```
 
 #### Rodando o projeto
