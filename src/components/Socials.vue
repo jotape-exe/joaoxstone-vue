@@ -6,7 +6,7 @@
         size="large"
         type="primary"
         shape="circle"
-        style="width: 4rem; height: 4rem; font-size: 26px;"
+        style="font-size: 14px;"
       >
         <template #icon><InstagramFilled /></template>
       </Button>
@@ -15,7 +15,7 @@
         size="large"
         type="primary"
         shape="circle"
-        style="width: 4rem; height: 4rem; font-size: 26px"
+        style="font-size: 14px"
       >
         <template #icon><LinkedinFilled /></template>
       </Button>
@@ -24,7 +24,7 @@
         size="large"
         type="primary"
         shape="circle"
-        style="width: 4rem; height: 4rem; font-size: 26px"
+        style="font-size: 14px"
       >
         <template #icon><MailFilled /></template>
       </Button>
