@@ -24,6 +24,8 @@
       </div>
     </div>
     <Button type="primary" @click.prevent="goToProject(projectUrl)">Ver</Button>
+    <Button v-if="gitHub !== undefined"  :icon="h(GithubOutlined)" style="margin-top: 5px;" @click.prevent="goToProject(gitHub)">
+        Github</Button>
   </div>
 </template>
 
@@ -34,7 +36,8 @@ import { defineProps } from "vue";
 import { CardContent } from "../models/interfaces/ICardContent";
 
 import SvgIcon from "@jamescoyle/vue-icon";
-import { mdiAccount } from "@mdi/js";
+import { h } from "vue";
+import { mdiGithub } from "@mdi/js";
 
 //const props = defineProps(['card']);
 
@@ -89,7 +92,7 @@ const goToProject = (url: string) => {
 
 @media(max-width: 962px){
   .card{
-    width: 70dvw;
+    width: 80dvw;
   }
 }
 

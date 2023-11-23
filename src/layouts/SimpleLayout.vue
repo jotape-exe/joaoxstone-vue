@@ -1,7 +1,6 @@
 <template>
   <Layout class="layout">
     <LayoutHeader>
-      <div class="logo" />
       <Menu
         v-model:selectedKeys="selectedKeys"
         theme="dark"
@@ -12,14 +11,11 @@
       >
       </Menu>
     </LayoutHeader>
-    <LayoutContent style="padding: 0 50px">
+    <LayoutContent>
       <RouterView
-        :style="{ background: '#fff', padding: '8px', minHeight: '280px' }"
+        :style="{ background: '#fff', padding: '12px', minHeight: '280px' }"
       ></RouterView>
     </LayoutContent>
-    <LayoutFooter style="text-align: center">
-      joaoxstone 2023
-    </LayoutFooter>
   </Layout>
 </template>
 <script lang="ts" setup>

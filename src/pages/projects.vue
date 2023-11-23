@@ -1,12 +1,13 @@
 <template>
   <div>
     <Space
-      style="margin-bottom: 80px; width: 100%; height: 100dvh; margin-top: 40px"
+      style="margin-bottom: 80px; width: 100%; height: 100dvh; margin-top: 40px;"
       align="center"
       size="middle"
       direction="vertical"
     >
-      <h1 class="title-style">PROJECTS</h1>
+      <TypographyTitle>PROJETOS</TypographyTitle>
+      <Divider style="font-size: 20px; font-weight: 300;">Nesta sessão você acompanhar meu projetos até <strong>{{ new Date().toLocaleDateString() }}</strong></Divider>
       <div class="container">
         <CardProject
           v-for="card in cards"
@@ -14,6 +15,7 @@
           :project-url="card.projectUrl"
           :project-logo="card.projectLogo"
           :content="card.content"
+          :git-hub="card.gitHub"
           :title="card.title"
           :project-date="card.projectDate"
           :url="card.url"
@@ -24,10 +26,11 @@
 </template>
 
 <script setup lang="ts">
-import { Space } from "ant-design-vue";
+import { Divider, Space, TypographyText, TypographyTitle } from "ant-design-vue";
 import CardProject from "../components/CardProject.vue";
 import { CardContent } from "../models/interfaces/ICardContent";
 import vince from "../../public/img/512vince.png";
+import izapai from "../../public/img/izapailogo.jpg"
 
 const cards: CardContent[] = [
   {
@@ -39,6 +42,7 @@ const cards: CardContent[] = [
     projectLogo: vince,
     projectUrl:
       "https://play.google.com/store/apps/details?id=com.company.ourfinances",
+      gitHub: undefined,
     url: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
@@ -56,8 +60,9 @@ const cards: CardContent[] = [
         fortalecida por prestações de serviços 
         ou vendas pagas no crediário.`,
     projectDate: "Novembro 2023",
-    projectLogo: vince,
-    projectUrl: "https://izapay-web.netlify.app/",
+    projectLogo: izapai,
+    projectUrl: "https://izapay.com.br/",
+    gitHub: undefined,
     url: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
