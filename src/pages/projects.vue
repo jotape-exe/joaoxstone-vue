@@ -7,7 +7,9 @@
       direction="vertical"
     >
       <TypographyTitle>PROJETOS</TypographyTitle>
-      <Divider style="font-size: 20px; font-weight: 300;">Nesta sessão você acompanhar meu projetos até <strong>{{ new Date().toLocaleDateString() }}</strong></Divider>
+      <div style="font-size: 20px; font-weight: 300; text-align: center;">Nesta sessão você acompanhar meu projetos até 
+        <strong>{{ new Date().toLocaleDateString() }}</strong>
+      </div>
       <div class="container">
         <CardProject
           v-for="card in cards"

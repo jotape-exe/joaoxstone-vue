@@ -50,12 +50,6 @@ const items = reactive([
     title: "Projetos",
   },
   {
-    key: "/recomendations",
-    icon: () => h(TeamOutlined),
-    label: "Recomendações",
-    title: "Recomendaçoes",
-  },
-  {
     key: "/experience",
     icon: () => h(CodeFilled),
     label: "Experiência",

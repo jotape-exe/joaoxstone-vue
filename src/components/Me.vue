@@ -7,9 +7,9 @@
       direction="vertical"
     >
       <CodeOutlined style="font-size: 60px; color: #722ed1" />
-      <h1 class="title-style">May the code be with you</h1>
-      <h2 class="title-style">João Pedro</h2>
-      <h3 class="title-style">Software Engineer</h3>
+      <TypographyTitle style="text-align: center;" class="title-style">May the code be with you</TypographyTitle>
+      <TypographyTitle :level="2" class="title-style">João Pedro</TypographyTitle>
+      <TypographyTitle :level="3" class="title-style">Mobile Developer</TypographyTitle>
     </Space>
   </div>
 </template>
@@ -17,8 +17,9 @@
 <script setup lang="ts">
 
 import CardProject from "./CardProject.vue";
-import { Space, Row } from "ant-design-vue";
+import { Space, Row, TypographyTitle } from "ant-design-vue";
 import {
+AndroidFilled,
   CodeOutlined,
 } from "@ant-design/icons-vue";
 

@@ -5,6 +5,7 @@ import About from '../components/About.vue';
 import Me from '../components/Me.vue';
 import Projects from '../pages/Projects.vue';
 import index from '../pages/index.vue';
+import Experience from '../pages/experience.vue';
 
 
 const routes = [
@@ -23,6 +24,11 @@ const routes = [
     name: 'Recomendations',
     component: About 
   },
+  {
+    path: '/experience',
+    name: 'Experience',
+    component: Experience
+  }
 ];
 
 const router = createRouter({
