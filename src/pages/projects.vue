@@ -32,7 +32,7 @@ import { Divider, Space, TypographyText, TypographyTitle } from "ant-design-vue"
 import CardProject from "../components/CardProject.vue";
 import { CardContent } from "../models/interfaces/ICardContent";
 import vince from "../../public/img/512vince.png";
-import izapai from "../../public/img/izapailogo.jpg"
+import izapai from "../../public/img/izapaylg.jpg"
 
 const cards: CardContent[] = [
   {

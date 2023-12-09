@@ -8,8 +8,8 @@
       <div style="height: 2px; background-color: #a8a8a8; width: 100%"></div>
     </div>
     <div class="content">
-      <div class="badge-ex">Front-End Developer</div>
-      <div class="badge-ex" style="background-color: #697fc9;">Mobile Developer</div>
+      <div class="badge-ex frontend-bg">Front-End Developer</div>
+      <div class="badge-ex mobile-bg">Mobile Developer</div>
       <p style="font-size: 17px; margin: 18px 0; ">
         Na Digytal eu fui reponsavel pelo desenvolmento front-end da aplicação
         IzaPay. Neste projeto obtive esperiências com as tecnologias: Vue e
@@ -18,7 +18,7 @@
         Web Application (PWA).
       </p>
     </div>
-    <Button style="width: 100%; margin: 10px 0" type="primary">
+    <Button @click="openLinkedin('https://www.linkedin.com/company/digytalfactory/')" style="width: 100%; margin: 10px 0" type="primary">
       <LinkedinFilled />
       Linkedin
     </Button>
@@ -28,6 +28,11 @@
 <script setup lang="ts">
 import { LinkedinFilled } from "@ant-design/icons-vue";
 import { Button, TypographyTitle } from "ant-design-vue";
+
+const openLinkedin = (url:string) => {
+  window.open(url)
+}
+
 </script>
 
 <style scoped>
@@ -43,8 +48,19 @@ import { Button, TypographyTitle } from "ant-design-vue";
   justify-content: space-between;
 }
 
-.badge-ex {
+.frontend-bg{
   background-color: #17245c;
+}
+
+.mobile-bg{
+  background-color: #697fc9;
+}
+
+.fullstack-bg{
+  background-color: #c45004;
+}
+
+.badge-ex {
   border-radius: 5px;
   padding: 7px;
   font-size: 18px;

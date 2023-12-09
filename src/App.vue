@@ -19,6 +19,8 @@ import { theme } from "ant-design-vue";
         colorInfo: '#1677ff',
       },
     }"
+
+    style="font-family: 'Lexend', sans-serif;"
   >
   </ConfigProvider>
   <SimpleLayout>

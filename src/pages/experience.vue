@@ -11,7 +11,7 @@
     >
       <TypographyTitle style="text-align: center;">Experiência Profissional</TypographyTitle>
       <div style="font-size: 20px; font-weight: 300; text-align: center;"
-        >Nesta sessão você acompanhar meu projetos até
+        >Acompanhe minha experiência até 
         <strong>{{ new Date().toLocaleDateString() }}</strong></div
       >
     </div>
@@ -25,7 +25,7 @@
 import { TypographyTitle } from "ant-design-vue";
 import ExperienceCard from "../components/ExperienceCard.vue";
 
-const array = [1, 2];
+const array = [1];
 </script>
 
 <style scoped>
