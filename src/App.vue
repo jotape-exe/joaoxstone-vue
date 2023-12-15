@@ -23,9 +23,7 @@ import { theme } from "ant-design-vue";
     style="font-family: 'Lexend', sans-serif;"
   >
   </ConfigProvider>
-  <SimpleLayout>
     <RouterView />
-  </SimpleLayout>
 </template>
 
 <style scoped></style>
