@@ -13,7 +13,7 @@
     </LayoutHeader>
     <LayoutContent>
       <RouterView
-        :style="{ background: '#fff', padding: '12px', minHeight: '280px' }"
+        :style="{ background: '#fff', minHeight: '280px' }"
       ></RouterView>
     </LayoutContent>
   </Layout>
@@ -63,6 +63,10 @@ const handleMenuClick = (info: any) => {
 };
 </script>
 <style scoped>
+
+.layout{
+  overflow: hidden;
+}
 .site-layout-content {
   min-height: 280px;
   padding: 24px;

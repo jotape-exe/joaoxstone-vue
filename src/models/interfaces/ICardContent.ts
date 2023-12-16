@@ -4,6 +4,8 @@ export interface CardContent {
       projectDate: string
       projectLogo: string,
       projectUrl: string,
-      gitHub: string,
+      gitHub: string | undefined,
       url: string[]
+      urlPreview: string
+      class: string
 }
